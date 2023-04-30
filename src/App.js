@@ -1,7 +1,38 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
 
+// function App() {
+//   return (
+//     <div className="container">
+//       <h1>My App</h1>
+//     </div>
+//   );
+// }
+
 function App() {
-  return <h1>Hello from the app component</h1>
+  const title = 'Blog Post'
+  const body = 'This is my blog post'
+  const comments = [
+    {id: 1, text: 'comment one'},
+    {id: 2, text: 'comment two'},
+    {id: 3, text: 'comment three'},
+  ]
+
+  return (
+    <div className="container">
+      <h1>{title}</h1>
+      <p>{body}</p>
+      <div className="comments">
+        <h3>Comments ({comments.length
+          })</h3>
+          <ul>
+            {comments.map((comment, index) =>(
+              <li>{comment.text}</li>
+            ))}
+          </ul>
+        
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
