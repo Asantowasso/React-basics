@@ -1,8 +1,10 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
+import {useState} from 'react'
 import Header from "./Components/Header"
 import FeedbackItem from "./Components/FeedbackItem"
 
 function App() {
+  const [feedback, setFeedback ] = useState()
   return (
     <>
     <Header  />
