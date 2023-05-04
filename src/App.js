@@ -1,15 +1,16 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
 import {useState} from 'react'
 import Header from "./Components/Header"
-import FeedbackItem from "./Components/FeedbackItem"
+import FeedbackList from "./Components/FeedbackList"
+import FeedbackData from './data/FeedbackData'
 
 function App() {
-  const [feedback, setFeedback ] = useState()
+  const [feedback, setFeedback ] = useState(FeedbackData)
   return (
     <>
     <Header  />
     <div className="container">
-      <FeedbackItem />
+      <FeedbackList feedback={feedback} />
     </div>
     </>
   );
