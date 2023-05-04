@@ -1,12 +1,13 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
 import Header from "./Components/Header"
+import FeedbackItem from "./Components/FeedbackItem"
 
 function App() {
   return (
     <>
     <Header  />
     <div className="container">
-      <h1>My App</h1>
+      <FeedbackItem />
     </div>
     </>
   );
