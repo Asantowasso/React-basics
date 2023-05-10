@@ -1,4 +1,5 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
+import {v4 as uuidv4} from 'uuid'
 import {useState} from 'react'
 import Header from "./Components/Header"
 import FeedbackList from "./Components/FeedbackList"
@@ -10,8 +11,8 @@ function App() {
   const [feedback, setFeedback ] = useState(FeedbackData)
 
   const addFeedback = (newFeedback) => {
-    console.log(newFeedback)
-
+    newFeedback.id = uuidv4()
+    setFeedback([newFeedback, ...feedback])
   }
 
 const deleteFeedback = (id) => {
