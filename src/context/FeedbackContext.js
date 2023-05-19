@@ -8,9 +8,22 @@ export const FeedbackProvider = ({children}) => {
   const [feedback, setFeedback] = useState([
     {
       id: 1,
-      text: 'This item is from context',
-      rating: 10
+      text: 'This is the first feedback item',
+      rating: 10,
+    },
+
+    {
+      id: 2,
+      text: 'This is the second feedback item',
+      rating: 7,
+    },
+
+    {
+      id: 3,
+      text: 'This is the third feedback item',
+      rating: 4,
     }
+
   ])
 
   const addFeedback = (newFeedback) => {
