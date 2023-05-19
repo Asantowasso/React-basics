@@ -1,23 +1,20 @@
 // Writing functions in this file will allow us to write JSX meaning we can use HTML syntax in our JavaScript
-import { v4 as uuidv4 } from "uuid";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+
 import Header from "./Components/Header";
 import FeedbackList from "./Components/FeedbackList";
 import FeedbackStats from "./Components/FeedbackStats";
 import FeedbackForm from "./Components/FeedbackForm";
 import AboutIconLink from "./Components/AboutIconLink";
-import FeedbackData from "./data/FeedbackData";
+
 import AboutPage from "./pages/AboutPage";
 import {FeedbackProvider} from './context/FeedbackContext'
 
 function App() {
-  const [feedback, setFeedback] = useState(FeedbackData);
+  
 
-  const addFeedback = (newFeedback) => {
-    newFeedback.id = uuidv4();
-    setFeedback([newFeedback, ...feedback]);
-  };
+  
 
   
 
@@ -29,7 +26,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={
             <>
-            <FeedbackForm handleAdd={addFeedback} />
+            <FeedbackForm  />
             <FeedbackStats />
             <FeedbackList  />
             
