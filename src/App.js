@@ -19,11 +19,7 @@ function App() {
     setFeedback([newFeedback, ...feedback]);
   };
 
-  const deleteFeedback = (id) => {
-    if (window.confirm("are you sure?")) {
-      setFeedback(feedback.filter((item) => item.id !== id));
-    }
-  };
+  
 
   return (
     <FeedbackProvider>
@@ -35,7 +31,7 @@ function App() {
             <>
             <FeedbackForm handleAdd={addFeedback} />
             <FeedbackStats />
-            <FeedbackList  handleDelete={deleteFeedback} />
+            <FeedbackList  />
             
             </>
 
