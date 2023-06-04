@@ -21,8 +21,8 @@
       "id": 5
     },
     {
-      "text": "This is a test review",
-      "rating": 7,
+      "text": "This post's rating and text has been changed",
+      "rating": 5,
       "id": 6
     }
   ]
